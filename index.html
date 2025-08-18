@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MiO — Made in Odisha | Coming Soon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand:#e76f51;         /* Top bar buttons */
+      --brand-dark:#c9573a;
+      --accent:#e67e22;        /* Millet pack orange */
+      --ink:#1b1b1b;           /* Body text */
+      --muted:#6b7280;         /* Subtle text */
+      --bg:#ffffff;            /* Page background */
+      --cream:#fff7ef;         /* Soft background band */
+      --red:#d62828;           /* Coming soon paint */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1120px,92vw);margin-inline:auto}
+
+    /* Header */
+    header{position:sticky;top:0;background:var(--bg);z-index:50;border-bottom:1px solid #eee}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo img{height:44px;width:auto}
+    .brand-sub{font-size:12px;color:#a16207;margin-top:-6px}
+
+    nav{display:flex;gap:12px}
+    .nav-btn{background:var(--brand);color:#fff;padding:10px 18px;border-radius:10px;border:1px solid #c24c32;font-weight:600;letter-spacing:.3px}
+    .nav-btn:hover{background:var(--brand-dark)}
+
+    /* Intro */
+    .intro{padding:24px 0 12px;font-size:15px;line-height:1.7}
+
+    /* Hero band with product packs */
+    .hero{position:relative;background:linear-gradient(180deg,var(--cream),#fff);border-radius:18px;overflow:hidden}
+    .hero-inner{padding:34px 18px 8px}
+    .hero-art{position:relative;display:flex;align-items:flex-end;justify-content:center;min-height:240px;background:linear-gradient(0deg, rgba(230,126,34,.18), rgba(230,126,34,.18))}
+    .hero-art::before{content:"";position:absolute;inset:auto 0 0 0;height:140px;background:var(--accent);opacity:.15}
+    .pack{position:relative;z-index:1;display:grid;grid-auto-flow:column;gap:18px;align-items:end}
+    .pack img{height:200px;width:auto;object-fit:contain;filter:drop-shadow(0 12px 18px rgba(0,0,0,.15))}
+
+    /* Coming soon banner */
+    .coming{display:grid;grid-template-columns:1fr auto;align-items:center;gap:24px;padding:28px 0}
+    .paint{background:var(--red);color:#fff;font-weight:800;font-size:42px;letter-spacing:.5px;padding:22px 28px;border-radius:10px;display:inline-block;transform:skewX(-6deg);text-transform:uppercase;text-align:center}
+    .drape{width:160px;height:110px;border:6px solid #9a5b2a;border-radius:8px;position:relative}
+    .drape::after{content:"";position:absolute;left:14px;top:-10px;width:130px;height:110px;background:linear-gradient(145deg,#b40000,#ff595e);border-radius:80% 20% 60% 40%/50% 40% 60% 50%;filter:blur(.2px);}
+
+    /* Products */
+    .section-title{font-weight:700;margin:20px 0 10px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:#fff;border:1px solid #eee;border-radius:16px;overflow:hidden}
+    .card-img{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:#fff7ef}
+    .card-body{padding:12px 14px}
+    .card-title{font-weight:600}
+
+    /* Footer */
+    footer{margin:28px 0 60px}
+    .footer{display:grid;gap:18px;grid-template-columns:1fr auto}
+    .addr{font-size:13px;color:#374151;line-height:1.6}
+    .contact{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:6px;font-size:13px}
+    .badge{display:inline-flex;align-items:center;gap:6px;border:1px solid #e5e7eb;border-radius:20px;padding:6px 10px}
+    .shop a{font-weight:700;color:#0f766e}
+    .footer-brand{display:grid;place-items:center;gap:8px}
+    .farm{font-weight:800;font-size:28px;line-height:1.1;color:#6b3f12}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr 1fr}
+      .paint{font-size:34px}
+      .drape{display:none}
+    }
+    @media (max-width:640px){
+      nav{display:none}
+      .grid{grid-template-columns:1fr}
+      .pack img{height:160px}
+      .paint{font-size:28px}
+      .footer{grid-template-columns:1fr}
+      .farm{font-size:24px}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container topbar">
+      <div class="logo">
+        <!-- Replace src with your MiO logo -->
+        <img src="images/mio-logo.png" alt="MiO — Made in Odisha" />
+        <div>
+          <div style="font-weight:800;font-size:22px;letter-spacing:.5px">miO</div>
+          <div class="brand-sub">Made in Odisha</div>
+        </div>
+      </div>
+      <nav>
+        <a class="nav-btn" href="#shop">SHOP ▾</a>
+        <a class="nav-btn" href="#learn">LEARN</a>
+        <a class="nav-btn" href="#about">ABOUT US</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Intro Copy -->
+  <section class="container intro">
+    <p><strong>MiO (Made in Odisha)</strong> offers the goodness of ancient grains and forgotten foods grown naturally by small and tribal farmers from the hinterlands of Odisha.</p>
+    <p>All products are processed with care to retain their nutrient value and deliver the 3H promise — Healthy food for you, Happiness through fair income for farmers, and Healing the planet with sustainable agricultural practices.</p>
+  </section>
+
+  <!-- Hero band with product packs -->
+  <section class="container hero" aria-label="Featured MiO Millets">
+    <div class="hero-inner">
+      <div class="hero-art">
+        <div class="pack">
+          <!-- Replace these three images with your actual pack photos -->
+          <img src="images/pack-foxtail.png" alt="Foxtail Millet pack" />
+          <img src="images/pack-hero.png" alt="Featured Millet pack" />
+          <img src="images/pack-little.png" alt="Little Millet pack" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coming Soon strip -->
+  <section class="container coming">
+    <div class="paint">COMING SOON</div>
+    <div class="drape" aria-hidden="true"></div>
+  </section>
+
+  <!-- Products -->
+  <section class="container" id="shop">
+    <h2 class="section-title">Our Products</h2>
+    <div class="grid">
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="card-img">
+          <img src="images/prod-foxtail.png" alt="Foxtail Millet" />
+        </div>
+        <div class="card-body">
+          <div class="card-title">Foxtail Millet</div>
+        </div>
+      </article>
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="card-img">
+          <img src="images/prod-little.png" alt="Little Millet" />
+        </div>
+        <div class="card-body">
+          <div class="card-title">Little Millet</div>
+        </div>
+      </article>
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="card-img">
+          <img src="images/prod-finger.png" alt="Finger Millet" />
+        </div>
+        <div class="card-body">
+          <div class="card-title">Finger Millet</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer / Address -->
+  <footer class="container">
+    <div class="footer">
+      <div>
+        <div class="addr">
+          <strong>Siddha Development Research and Consultancy Pvt. Ltd</strong><br />
+          Plot No-273/2983, Khata No-238/2219,<br />
+          Bijipur, Khordha, Odisha-752054
+        </div>
+        <div class="contact">
+          <span class="badge">For Queries &amp; Feedback:</span>
+          <span class="badge">mio@sdrcc.co.in</span>
+          <span class="badge">+91 9938182723</span>
+          <span class="badge shop">Shop Online: <a href="https://themiostore.com" target="_blank" rel="noopener">themiostore.com</a></span>
+        </div>
+      </div>
+      <div class="footer-brand">
+        <img src="images/mio-logo.png" alt="MiO logo" style="height:54px" />
+        <div class="farm">Farm to<br/>Families</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
