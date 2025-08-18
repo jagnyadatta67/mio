@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MiO — Millet Recipes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Easy, healthy millet recipes using MiO millets — foxtail, little and finger millet. Step-by-step photos, tips and nutrition." />
+  <style>
+    :root{
+      --brand:#e76f51; --brand-dark:#c9573a; --accent:#e67e22; --ink:#1b1b1b; --muted:#6b7280; --bg:#ffffff; --cream:#fff7ef; --red:#d62828;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1120px,92vw);margin-inline:auto}
+    header{position:sticky;top:0;background:var(--bg);z-index:50;border-bottom:1px solid #eee}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo img{height:44px;width:auto}
+    .brand-sub{font-size:12px;color:#a16207;margin-top:-6px}
+    nav{display:flex;gap:12px}
+    .nav-btn{background:var(--brand);color:#fff;padding:10px 18px;border-radius:10px;border:1px solid #c24c32;font-weight:600;letter-spacing:.3px}
+    .nav-btn:hover{background:var(--brand-dark)}
+
+    .hero{background:linear-gradient(180deg,var(--cream),#fff);border-radius:18px;overflow:hidden;margin:18px 0}
+    .hero-inner{padding:28px 20px}
+    .hero h1{margin:0 0 6px;font-size:34px}
+    .lead{color:#374151;max-width:70ch}
+
+    /* Controls */
+    .controls{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin:16px 0}
+    .input,select{border:1px solid #e5e7eb;border-radius:12px;padding:12px 14px;font:inherit}
+    .btn{background:var(--brand);color:#fff;padding:12px 16px;border:0;border-radius:12px;font-weight:600}
+
+    /* Cards */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:22px 0 10px}
+    .card{background:#fff;border:1px solid #eee;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+    .card-media{aspect-ratio:4/3;background:#fff7ef;display:flex;align-items:center;justify-content:center}
+    .badge{position:absolute;margin:10px;background:#0f766e;color:#fff;padding:6px 10px;border-radius:999px;font-size:12px}
+    .card-body{padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+    .title{font-weight:700}
+    .meta{color:var(--muted);font-size:13px}
+    .tags{display:flex;flex-wrap:wrap;gap:6px}
+    .tag{background:#f3f4f6;border:1px solid #e5e7eb;border-radius:999px;font-size:12px;padding:6px 10px}
+    .actions{margin-top:auto;display:flex;gap:10px}
+    .ghost{background:#fff;border:1px solid #e5e7eb;color:#111827}
+
+    /* Newsletter */
+    .news{display:grid;grid-template-columns:1.5fr 1fr;gap:18px;align-items:center;background:#fef3c7;border:1px dashed #fbbf24;border-radius:16px;padding:18px}
+
+    /* Instagram */
+    .ig{background:#fff;border:1px solid #eee;border-radius:16px;padding:14px}
+    .ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .ig-tile{aspect-ratio:1/1;background:#f3f4f6;border-radius:10px}
+
+    footer{margin:28px 0 60px}
+    .footer{display:grid;gap:18px;grid-template-columns:1fr auto}
+    .addr{font-size:13px;color:#374151;line-height:1.6}
+    .contact{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:6px;font-size:13px}
+    .shop a{font-weight:700;color:#0f766e}
+    .footer-brand{display:grid;place-items:center;gap:8px}
+    .farm{font-weight:800;font-size:28px;line-height:1.1;color:#6b3f12}
+
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr 1fr}
+      .controls{grid-template-columns:1fr 1fr}
+      .news{grid-template-columns:1fr}
+      .ig-grid{grid-template-columns:repeat(3,1fr)}
+    }
+    @media (max-width:640px){
+      nav{display:none}
+      .grid{grid-template-columns:1fr}
+      .ig-grid{grid-template-columns:repeat(2,1fr)}
+      .farm{font-size:24px}
+    }
+  </style>
+  <!-- Example Recipe JSON-LD (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Recipe",
+    "name":"Foxtail Millet Upma",
+    "recipeCuisine":"Indian",
+    "author":{"@type":"Organization","name":"MiO"},
+    "image":"https://example.com/images/recipe-foxtail-upma.jpg",
+    "recipeIngredient":["1 cup foxtail millet","1 onion","1 carrot","2 tbsp oil","salt"],
+    "recipeInstructions":[{"@type":"HowToStep","text":"Rinse and soak millet 15 minutes."},{"@type":"HowToStep","text":"Sauté vegetables, add millet and water, cook until fluffy."}],
+    "totalTime":"PT25M",
+    "recipeCategory":"Breakfast",
+    "keywords":"millet, foxtail, upma"
+  }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container topbar">
+      <div class="logo">
+        <img src="images/mio-logo.png" alt="MiO — Made in Odisha" />
+        <div>
+          <div style="font-weight:800;font-size:22px;letter-spacing:.5px">miO</div>
+          <div class="brand-sub">Made in Odisha</div>
+        </div>
+      </div>
+      <nav>
+        <a class="nav-btn" href="/">HOME</a>
+        <a class="nav-btn" href="#filters">RECIPES</a>
+        <a class="nav-btn" href="/shop">SHOP ▾</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="container hero">
+    <div class="hero-inner">
+      <h1>Millet Recipes</h1>
+      <p class="lead">Cook healthy, tasty meals with MiO millets. Explore quick breakfasts, kids’ snacks and festive sweets — all with foxtail, little and finger millet.</p>
+    </div>
+  </section>
+
+  <!-- Filters / Search -->
+  <section id="filters" class="container">
+    <div class="controls">
+      <input class="input" type="search" placeholder="Search recipes (e.g., dosa, ladoo, upma)" aria-label="Search recipes" />
+      <select aria-label="Millet type">
+        <option value="">All Millets</option>
+        <option>Foxtail</option>
+        <option>Little</option>
+        <option>Finger (Ragi)</option>
+      </select>
+      <select aria-label="Meal type">
+        <option value="">Any Meal</option>
+        <option>Breakfast</option>
+        <option>Snack</option>
+        <option>Sweet</option>
+        <option>Lunch/Dinner</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Recipe Cards -->
+  <section class="container">
+    <div class="grid">
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="card-media" style="position:relative">
+          <span class="badge">Foxtail</span>
+          <img src="images/recipes/foxtail-upma.jpg" alt="Foxtail Millet Upma" />
+        </div>
+        <div class="card-body">
+          <div class="title">Foxtail Millet Upma</div>
+          <div class="meta">25 mins • Breakfast • Serves 2</div>
+          <div class="tags">
+            <span class="tag">Vegan</span><span class="tag">High Fiber</span><span class="tag">Kids Friendly</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="recipe-foxtail-upma.html">View Recipe</a>
+            <button class="btn ghost" onclick="navigator.share?navigator.share({title:'Foxtail Millet Upma',url:location.href}):window.alert('Share using your browser menu!')">Share</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="card-media" style="position:relative">
+          <span class="badge">Finger</span>
+          <img src="images/recipes/finger-ladoo.jpg" alt="Finger Millet (Ragi) Ladoo" />
+        </div>
+        <div class="card-body">
+          <div class="title">Finger Millet Ladoo</div>
+          <div class="meta">30 mins • Sweet • Serves 12</div>
+          <div class="tags"><span class="tag">No Refined Sugar</span><span class="tag">Festive</span></div>
+          <div class="actions">
+            <a class="btn" href="recipe-finger-ladoo.html">View Recipe</a>
+            <button class="btn ghost" onclick="navigator.share?navigator.share({title:'Finger Millet Ladoo',url:location.href}):window.alert('Share using your browser menu!')">Share</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="card-media" style="position:relative">
+          <span class="badge">Little</span>
+          <img src="images/recipes/little-pongal.jpg" alt="Little Millet Pongal" />
+        </div>
+        <div class="card-body">
+          <div class="title">Little Millet Pongal</div>
+          <div class="meta">20 mins • Lunch/Dinner • Serves 3</div>
+          <div class="tags"><span class="tag">Protein Rich</span><span class="tag">Comfort Food</span></div>
+          <div class="actions">
+            <a class="btn" href="recipe-little-pongal.html">View Recipe</a>
+            <button class="btn ghost" onclick="navigator.share?navigator.share({title:'Little Millet Pongal',url:location.href}):window.alert('Share using your browser menu!')">Share</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA / Newsletter -->
+  <section class="container news">
+    <div>
+      <h3 style="margin:0 0 6px">Get new millet recipes in your inbox</h3>
+      <p style="margin:0 0 10px;color:#374151">One simple, healthy recipe every week. No spam.</p>
+      <form onsubmit="event.preventDefault(); alert('Subscribed! (Replace with your email service)');">
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <input class="input" type="email" placeholder="Your email address" required style="flex:1 1 280px" />
+          <button class="btn" type="submit">Subscribe</button>
+        </div>
+      </form>
+    </div>
+    <div style="text-align:center">
+      <img src="images/newsletter-illustration.png" alt="Newsletter" style="max-height:140px;margin:auto" />
+    </div>
+  </section>
+
+  <!-- Instagram Embed Placeholder -->
+  <section class="container" style="margin-top:18px">
+    <div class="ig">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px">
+        <h3 style="margin:0">From Instagram</h3>
+        <a class="btn" href="https://instagram.com/yourhandle" target="_blank" rel="noopener">Follow @yourhandle</a>
+      </div>
+      <div class="ig-grid">
+        <!-- Replace these tiles with actual Instagram embed or images linked to posts -->
+        <a class="ig-tile" href="#" aria-label="Instagram post 1"></a>
+        <a class="ig-tile" href="#" aria-label="Instagram post 2"></a>
+        <a class="ig-tile" href="#" aria-label="Instagram post 3"></a>
+        <a class="ig-tile" href="#" aria-label="Instagram post 4"></a>
+        <a class="ig-tile" href="#" aria-label="Instagram post 5"></a>
+        <a class="ig-tile" href="#" aria-label="Instagram post 6"></a>
+        <a class="ig-tile" href="#" aria-label="Instagram post 7"></a>
+        <a class="ig-tile" href="#" aria-label="Instagram post 8"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer / Address -->
+  <footer class="container">
+    <div class="footer">
+      <div>
+        <div class="addr">
+          <strong>Siddha Development Research and Consultancy Pvt. Ltd</strong><br />
+          Plot No-273/2983, Khata No-238/2219,<br />
+          Bijipur, Khordha, Odisha-752054
+        </div>
+        <div class="contact">
+          <span>For Queries &amp; Feedback: mio@sdrcc.co.in • +91 9938182723</span>
+          <span class="shop">Shop Online: <a href="https://themiostore.com" target="_blank" rel="noopener">themiostore.com</a></span>
+        </div>
+      </div>
+      <div class="footer-brand">
+        <img src="images/mio-logo-sm.png" alt="MiO logo" style="height:54px" />
+        <div class="farm">Farm to<br/>Families</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
