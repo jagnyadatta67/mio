@@ -114,12 +114,12 @@
 .carousel-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.4);
+  transform: translateY(-202%);
+  background: #ff595e;
   border: none;
-  color: #fff;
-  font-size: 24px;
-  padding: 8px 12px;
+  color: #eee;
+  font-size: 10px;
+  padding: 8px 8px;
   cursor: pointer;
   border-radius: 50%;
 }
@@ -130,20 +130,93 @@
 /* dots */
 .carousel-dots {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 7px;
 }
 .carousel-dots button {
   border: none;
   background: #bbb;
   border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  margin: 0 4px;
+  width: 3px;
+  height: 3px;
+  margin: 0 3px;
   cursor: pointer;
 }
 .carousel-dots button.active {
   background: #333;
 }
+
+/* Note Section */
+  .note-section {
+    max-width: 900px;
+    width: 90%;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.6;
+    background: #e76f51;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+    font-family: sans-serif;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+
+  .note-section p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  /* WhatsApp Button */
+  .wa-button-wrap {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .wa-button {
+    background-color: #25D366;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+  }
+
+  .wa-button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+
+  .wa-button:hover {
+    transform: scale(1.05);
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    .note-section {
+      font-size: 16px;
+      padding: 15px;
+      width: 95%;
+    }
+
+    .wa-button {
+      font-size: 16px;
+      padding: 10px 18px;
+    }
+
+    .wa-button img {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+  }
   </style>
 </head>
 <body>
@@ -154,23 +227,18 @@
         <!-- Replace src with your MiO logo -->
         <img src="images/mio-logo.png" alt="MiO — Made in Odisha" />
         <div>
-          <div style="font-weight:800;font-size:22px;letter-spacing:.5px">miO</div>
+          <div style="font-weight:800;font-size:22px;letter-spacing:.5px">MiO</div>
           <div class="brand-sub">Made in Odisha</div>
         </div>
       </div>
       <nav>
-        <a class="nav-btn" href="#shop">SHOP ▾</a>
-        <a class="nav-btn" href="recipes.html">RECIPES</a>
-        <a class="nav-btn" href="#about">ABOUT US</a>
+        
       </nav>
     </div>
   </header>
 
   <!-- Intro Copy -->
-  <section class="container intro">
-    <p><strong>MiO (Made in Odisha)</strong> offers the goodness of ancient grains and forgotten foods grown naturally by small and tribal farmers from the hinterlands of Odisha.</p>
-    <p>All products are processed with care to retain their nutrient value and deliver the 3H promise — Healthy food for you, Happiness through fair income for farmers, and Healing the planet with sustainable agricultural practices.</p>
-  </section>
+
 
   <!-- Hero band with product packs -->
 <section class="container" aria-label="Featured MiO Millets">
@@ -195,29 +263,23 @@
 
 </section>
 
-<!-- Coming Soon strip -->
-<section class="container coming" style="text-align:center; padding:40px 20px; font-family:sans-serif;">
-
-<div style="margin-bottom:25px; font-size:18px; color:#fff; max-width:700px; margin-left:auto; margin-right:auto; line-height:1.6; background:#e76f51; padding:25px 30px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
-  <p style="margin:0; font-weight:500; text-align:center;">
-    🌱 While we get our ecommerce site up and running, we invite you to connect with us for some tempting preorders  
-    on our range of <strong>millets</strong> and <strong>special recipes</strong>...
+<!-- Full-width note section -->
+<div class="note-section">
+  <p>
+    🌱 E-commerce site launching soon! Preorders now open.
   </p>
 </div>
 
-
-
-  <!-- WhatsApp Order Button -->
+<!-- WhatsApp button centered -->
+<div class="wa-button-wrap">
   <a href="https://wa.me/919938182723?text=Hi%20I%20want%20to%20place%20an%20order" 
      target="_blank" 
-     style="background-color:#25D366; color:white; padding:14px 28px; border-radius:50px; font-size:20px; font-weight:bold; text-decoration:none; display:inline-flex; align-items:center; box-shadow:0px 4px 8px rgba(0,0,0,0.2);">
+     class="wa-button">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-           alt="WhatsApp" 
-           style="width:28px; height:28px; margin-right:12px;">
+           alt="WhatsApp">
       Order Now
   </a>
-
-</section>
+</div>
 
 
   <!-- Products -->
