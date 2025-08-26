@@ -291,59 +291,69 @@
  /* Feedback Carousel Wrapper */
 /* Wrapper */
 /* Feedback Carousel Wrapper */
-.carousel-feedback {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  padding: 50px 0;
-  background-size: 400% 400%;
-  animation: gradientShift 20s ease infinite; /* Slower background animation */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+      .feedback-section {
+      max-width: 900px;
+      margin: 50px auto;
+      text-align: center;
+      position: relative;
+      padding: 20px;
+    }
 
-/* Moving Track */
-.carousel-track-feedback {
-  display: flex;
-  gap: 20px;
-  animation: scrollFeedback 80s linear infinite; /* much slower scrolling */
-}
+    .feedback-section h2 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #444;
+      margin-bottom: 20px;
+    }
 
-/* Cards */
-.feedback-card-feedback {
-  flex: 0 0 auto;
-  min-width: 280px;
-  max-width: 320px;
-  background: white;
-  border-radius: 20px;
-  padding: 20px;
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  text-align: center;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
+    .carousel-container-feedback {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
 
-/* Hover Glow */
-.feedback-card-feedback:hover {
-  transform: scale(1.08) rotate(-1deg);
-  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-}
+    .carousel-track-feedback {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
 
-/* Smooth Loop */
-@keyframes scrollFeedback {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
+    .carousel-item-feedback {
+      min-width: 100%;
+      padding: 30px;
+      box-sizing: border-box;
+    }
 
-/* Gradient BG Animation */
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+    .carousel-item-feedback p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Arrow Buttons */
+    .carousel-btn-feedback {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(135deg, #ff512f, #dd2476);
+      border: none;
+      color: white;
+      font-size: 14px;   /* smaller arrow size */
+      padding: 8px 10px; /* smaller button */
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      z-index: 10;
+    }
+
+    .carousel-btn-feedback.prev {
+      left: 10px;   /* closer to left */
+    }
+
+    .carousel-btn-feedback.next {
+      right: 10px;  /* closer to right */
+    }
 
   </style>
 </head>
@@ -447,37 +457,30 @@
   
 
 <!-- Customer Feedback Section -->
-<div class="container">
- <h2 class="text-4xl font-extrabold text-center mb-10 
-    bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 
-    text-transparent bg-clip-text drop-shadow-md">
-    <br>🌈 More Than Products — It’s a MiO Experience ❤️ 
+ <div class="feedback-section">
+    <h2>🌟 Loved by Our Shoppers ❤️ Hear Their Stories</h2>
     
-</h2>
-  <h3><br> Hear from Our Family ✨ 💬</h3>
-  <div class="carousel-feedback">
-    <div class="carousel-track-feedback">
-      <!-- Original Feedback Cards -->
-      <div class="feedback-card-feedback">"Amazing quality! MiO products remind me of my childhood flavors. 💚" – Priya R.</div>
-      <div class="feedback-card-feedback">"Healthy & delicious! Finally found my go-to store. 🌱" – Siddha P.</div>
-      <div class="feedback-card-feedback">"Beautiful packaging and authentic taste. ⭐⭐⭐⭐⭐" – Sreejoy.</div>
-      <div class="feedback-card-feedback">"Affordable & wholesome food for the family. 🙌" – Swaroop Samal.</div>
-      <div class="feedback-card-feedback">"Best millet-based products in Odisha! 🥳" – Sandeep.</div>
-      <div class="feedback-card-feedback">"Customer support is very friendly and helpful. 😊" – Kaunteya P.</div>
-      <div class="feedback-card-feedback">"Every bite feels fresh and homemade. 🍲" – Anjali.</div>
-      <div class="feedback-card-feedback">"Can’t wait for new product launches! 🔥" – Soanli P.</div>
-      <div class="feedback-card-feedback">"Millets made tasty again! Loving the recipes. 😍" – Amit P.</div>
-      <div class="feedback-card-feedback">"Super fast preorder delivery. Highly recommend! 🚀" – Jagnya D.</div>
+    <div class="carousel-container-feedback">
+      <div class="carousel-track-feedback">
+        <div class="carousel-item-feedback">
+          <p>“Amazing quality and packaging! Will definitely buy again.”</p>
+        </div>
+        <div class="carousel-item-feedback">
+          <p>“Fast delivery and excellent customer service 👏”</p>
+        </div>
+        <div class="carousel-item-feedback">
+          <p>“Loved the natural products — millet flour, soaps, and oils are top-notch.”</p>
+        </div>
+        <div class="carousel-item-feedback">
+          <p>“Affordable pricing and eco-friendly packaging 🌱”</p>
+        </div>
+      </div>
 
-      <!-- Duplicate Cards for Infinite Loop -->
-      <div class="feedback-card-feedback">"Amazing quality! MiO products remind me of my childhood flavors. 💚" – Priya R.</div>
-      <div class="feedback-card-feedback">"Healthy & delicious! Finally found my go-to store. 🌱" – Siddha P.</div>
-      <div class="feedback-card-feedback">"Beautiful packaging and authentic taste. ⭐⭐⭐⭐⭐" – Sreejoy.</div>
-      <div class="feedback-card-feedback">"Affordable & wholesome food for the family. 🙌" – Swaroop Samal.</div>
-      <div class="feedback-card-feedback">"Best millet-based products in Odisha! 🥳" – Sandeep.</div>
+      <!-- Smaller Arrows -->
+      <button class="carousel-btn-feedback prev">&#10094;</button>
+      <button class="carousel-btn-feedback next">&#10095;</button>
     </div>
   </div>
-</div>
   <!-- Footer / Address -->
   <!-- Footer / Address -->
 <footer class="container">
@@ -567,17 +570,38 @@ setInterval(() => {
   let next = currentSlide + 1 >= slides.length ? 0 : currentSlide + 1;
   updateSlide(next);
 }, 6000);
-  var swiper = new Swiper(".mySwiper", {
-    loop: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+
+
+  // Auto slide every 3s
+
+ const track1 = document.querySelector('.carousel-track-feedback');
+    const items = document.querySelectorAll('.carousel-item-feedback');
+    const prevBtn1 = document.querySelector('.carousel-btn-feedback.prev');
+    const nextBtn1 = document.querySelector('.carousel-btn-feedback.next');
+
+    let index = 0;
+
+    function updateCarousel() {
+      track1.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    nextBtn1.addEventListener('click', () => {
+      index = (index + 1) % items.length;
+      updateCarousel();
+    });
+
+    prevBtn1.addEventListener('click', () => {
+      index = (index - 1 + items.length) % items.length;
+      updateCarousel();
+    });
+
+    // Auto slide every 6s
+    setInterval(() => {
+      index = (index + 1) % items.length;
+      updateCarousel();
+    }, 6000);
+  </script>
+
 
 </script>
 </html>
