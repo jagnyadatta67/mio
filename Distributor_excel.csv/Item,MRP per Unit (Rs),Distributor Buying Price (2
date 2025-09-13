@@ -1,0 +1,4 @@
+Item,MRP per Unit (Rs),Distributor Buying Price (20% off MRP),Qty per Peti,No. of Petis,Total Quantity (Including Free),Payable Quantity (Qty per Peti - Free) * Petis,Effective Cost per Unit (Rs),Selling Price per Unit (MRP),Profit per Unit (Rs),Total Revenue (Rs),Total Cost (Rs),Total Profit (Rs)
+Finger Millet,95,=B2*0.8,15,7,=D2*E2,=(D2-1)*E2,=(G2*C2)/F2,=B2,=I2-H2,=F2*I2,=G2*C2,=K2-L2
+Little Millet,120,=B3*0.8,15,7,=D3*E3,=(D3-1)*E3,=(G3*C3)/F3,=B3,=I3-H3,=F3*I3,=G3*C3,=K3-L3
+Foxtail Millet,120,=B4*0.8,15,8,=D4*E4,=(D4-1)*E4,=(G4*C4)/F4,=B4,=I4-H4,=F4*I4,=G4*C4,=K4-L4
