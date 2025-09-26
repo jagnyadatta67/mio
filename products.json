@@ -48,6 +48,27 @@
       }
     },
     {
+      "id": "P006",
+      "name": "Finger Millet (Ragi)",
+      "description": "Calcium-rich millet, great for bone health and kids’ nutrition.",
+      "price": 100,
+      "currency": "INR",
+      "quantity": 60,
+      "sku": "MIL-FR-006",
+      "brand": "MiO Organics",
+      "category": "Grains",
+      "imageUrl": "https://www.themiostore.com/images/prod-finger.png",
+      "availability": "In Stock",
+      "rating": 4.8,
+      "unit": "1kg",
+      "offer": {
+        "salePrice": 85,
+        "discountPercent": 15,
+        "title": "Kids Nutrition Combo",
+        "validTill": "2025-10-12"
+      }
+    },
+    {
       "id": "P003",
       "name": "Barnyard Millet",
       "description": "Low glycemic index grain, suitable for diabetic-friendly meals.",
@@ -108,27 +129,6 @@
         "discountPercent": 15,
         "title": "Healthy Lifestyle Offer",
         "validTill": "2025-10-10"
-      }
-    },
-    {
-      "id": "P006",
-      "name": "Finger Millet (Ragi)",
-      "description": "Calcium-rich millet, great for bone health and kids’ nutrition.",
-      "price": 100,
-      "currency": "INR",
-      "quantity": 60,
-      "sku": "MIL-FR-006",
-      "brand": "MiO Organics",
-      "category": "Grains",
-      "imageUrl": "https://www.themiostore.com/images/prod-finger.png",
-      "availability": "In Stock",
-      "rating": 4.8,
-      "unit": "1kg",
-      "offer": {
-        "salePrice": 85,
-        "discountPercent": 15,
-        "title": "Kids Nutrition Combo",
-        "validTill": "2025-10-12"
       }
     },
     {
