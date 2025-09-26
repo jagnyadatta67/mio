@@ -1,0 +1,219 @@
+{
+  "store": {
+    "name": "Local Fresh Mart",
+    "currency": "INR",
+    "lastUpdated": "2025-09-26T10:00:00Z"
+  },
+  "products": [
+    {
+      "id": "P001",
+      "name": "Organic Foxtail Millet",
+      "description": "Nutritious and fiber-rich foxtail millet, perfect for a healthy diet.",
+      "price": 120,
+      "currency": "INR",
+      "quantity": 50,
+      "sku": "MIL-FT-001",
+      "brand": "MiO Organics",
+      "category": "Grains",
+      "imageUrl": "https://example.com/images/foxtail-millet.jpg",
+      "availability": "In Stock",
+      "rating": 4.7,
+      "unit": "1kg",
+      "offer": {
+        "salePrice": 99,
+        "discountPercent": 17,
+        "title": "Festival Offer",
+        "validTill": "2025-10-15"
+      }
+    },
+    {
+      "id": "P002",
+      "name": "Little Millet",
+      "description": "High in iron and calcium, little millet is great for kids and adults alike.",
+      "price": 110,
+      "currency": "INR",
+      "quantity": 40,
+      "sku": "MIL-LT-002",
+      "brand": "MiO Organics",
+      "category": "Grains",
+      "imageUrl": "https://example.com/images/little-millet.jpg",
+      "availability": "In Stock",
+      "rating": 4.6,
+      "unit": "1kg",
+      "offer": {
+        "salePrice": 95,
+        "discountPercent": 14,
+        "title": "Back to School Health Pack",
+        "validTill": "2025-10-05"
+      }
+    },
+    {
+      "id": "P003",
+      "name": "Barnyard Millet",
+      "description": "Low glycemic index grain, suitable for diabetic-friendly meals.",
+      "price": 130,
+      "currency": "INR",
+      "quantity": 35,
+      "sku": "MIL-BY-003",
+      "brand": "MiO Organics",
+      "category": "Grains",
+      "imageUrl": "https://example.com/images/barnyard-millet.jpg",
+      "availability": "In Stock",
+      "rating": 4.5,
+      "unit": "1kg",
+      "offer": {
+        "salePrice": 110,
+        "discountPercent": 15,
+        "title": "Diabetic Care Special",
+        "validTill": "2025-10-20"
+      }
+    },
+    {
+      "id": "P004",
+      "name": "Kodo Millet",
+      "description": "Rich in antioxidants, supports digestion and immunity.",
+      "price": 125,
+      "currency": "INR",
+      "quantity": 45,
+      "sku": "MIL-KD-004",
+      "brand": "MiO Organics",
+      "category": "Grains",
+      "imageUrl": "https://example.com/images/kodo-millet.jpg",
+      "availability": "In Stock",
+      "rating": 4.4,
+      "unit": "1kg",
+      "offer": {
+        "salePrice": 105,
+        "discountPercent": 16,
+        "title": "Festive Wellness Pack",
+        "validTill": "2025-10-15"
+      }
+    },
+    {
+      "id": "P005",
+      "name": "Proso Millet",
+      "description": "Gluten-free and packed with protein, ideal for weight management.",
+      "price": 140,
+      "currency": "INR",
+      "quantity": 30,
+      "sku": "MIL-PR-005",
+      "brand": "MiO Organics",
+      "category": "Grains",
+      "imageUrl": "https://example.com/images/proso-millet.jpg",
+      "availability": "In Stock",
+      "rating": 4.3,
+      "unit": "1kg",
+      "offer": {
+        "salePrice": 119,
+        "discountPercent": 15,
+        "title": "Healthy Lifestyle Offer",
+        "validTill": "2025-10-10"
+      }
+    },
+    {
+      "id": "P006",
+      "name": "Finger Millet (Ragi)",
+      "description": "Calcium-rich millet, great for bone health and kids’ nutrition.",
+      "price": 100,
+      "currency": "INR",
+      "quantity": 60,
+      "sku": "MIL-FR-006",
+      "brand": "MiO Organics",
+      "category": "Grains",
+      "imageUrl": "https://example.com/images/finger-millet.jpg",
+      "availability": "In Stock",
+      "rating": 4.8,
+      "unit": "1kg",
+      "offer": {
+        "salePrice": 85,
+        "discountPercent": 15,
+        "title": "Kids Nutrition Combo",
+        "validTill": "2025-10-12"
+      }
+    },
+    {
+      "id": "P007",
+      "name": "Pearl Millet (Bajra)",
+      "description": "High in fiber and energy, helps regulate blood sugar levels.",
+      "price": 90,
+      "currency": "INR",
+      "quantity": 70,
+      "sku": "MIL-PL-007",
+      "brand": "MiO Organics",
+      "category": "Grains",
+      "imageUrl": "https://example.com/images/pearl-millet.jpg",
+      "availability": "In Stock",
+      "rating": 4.6,
+      "unit": "1kg",
+      "offer": {
+        "salePrice": 75,
+        "discountPercent": 17,
+        "title": "Daily Energy Offer",
+        "validTill": "2025-10-08"
+      }
+    },
+    {
+      "id": "P008",
+      "name": "Sorghum (Jowar)",
+      "description": "Rich in protein and iron, supports weight loss and heart health.",
+      "price": 95,
+      "currency": "INR",
+      "quantity": 55,
+      "sku": "MIL-SG-008",
+      "brand": "MiO Organics",
+      "category": "Grains",
+      "imageUrl": "https://example.com/images/sorghum.jpg",
+      "availability": "In Stock",
+      "rating": 4.7,
+      "unit": "1kg",
+      "offer": {
+        "salePrice": 82,
+        "discountPercent": 14,
+        "title": "Heart Healthy Choice",
+        "validTill": "2025-10-18"
+      }
+    },
+    {
+      "id": "P009",
+      "name": "Brown Top Millet",
+      "description": "Rare millet variety, good for detox and weight management.",
+      "price": 150,
+      "currency": "INR",
+      "quantity": 25,
+      "sku": "MIL-BT-009",
+      "brand": "MiO Organics",
+      "category": "Grains",
+      "imageUrl": "https://example.com/images/brown-top-millet.jpg",
+      "availability": "Limited Stock",
+      "rating": 4.5,
+      "unit": "1kg",
+      "offer": {
+        "salePrice": 129,
+        "discountPercent": 14,
+        "title": "Limited Stock Discount",
+        "validTill": "2025-10-07"
+      }
+    },
+    {
+      "id": "P010",
+      "name": "Multi Millet Flour",
+      "description": "Blend of 5 power-packed millets, ideal for rotis and baking.",
+      "price": 160,
+      "currency": "INR",
+      "quantity": 40,
+      "sku": "MIL-MM-010",
+      "brand": "MiO Organics",
+      "category": "Flour",
+      "imageUrl": "https://example.com/images/multi-millet-flour.jpg",
+      "availability": "In Stock",
+      "rating": 4.9,
+      "unit": "1kg",
+      "offer": {
+        "salePrice": 135,
+        "discountPercent": 16,
+        "title": "Family Pack Special",
+        "validTill": "2025-10-22"
+      }
+    }
+  ]
+}
